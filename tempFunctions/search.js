@@ -17,7 +17,6 @@ async function searchPokemon(e){
 
         if (tmp){
 
-
             cell1.innerHTML = i;
             cell2.innerHTML = arr[i];
             console.log(arr[i]);
