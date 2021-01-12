@@ -1,9 +1,9 @@
 const arr = [];
 
-async function searchPokemon(e){
+function searchPokemon(e){
     e.preventDefault();
 
-    let input = document.getElementById("search-input").value
+    let input = document.getElementById("search-input").value;
 
     for (let i = 0; i <= arr.length; i++){
         let table = document.getElementById("pokemonTable");
@@ -43,5 +43,5 @@ async function getAllPokemon(){
 
 }
 
-document.getElementsByTagName("form")[0].addEventListener('submit', searchPokemon)
+document.getElementsByTagName("form")[0].addEventListener('submit', searchPokemon);
 document.onload = getAllPokemon();
