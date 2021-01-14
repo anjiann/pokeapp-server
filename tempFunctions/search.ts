@@ -92,7 +92,7 @@ export const getPokemonBySearch = async (input:string):Promise<Pokemon[]> => {
     }
 }
 
-export const getMatches = (pokemons:Pokemon[], pokemons2:Pokemon[]) => {
+export const getMatchingPokemons = (pokemons:Pokemon[], pokemons2:Pokemon[]) => {
 
     let returnPokemons:Pokemon[];
 
