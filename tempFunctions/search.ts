@@ -94,7 +94,7 @@ export const getPokemonBySearch = async (input:string):Promise<Pokemon[]> => {
 
 export const getMatches = (pokemons:Pokemon[], pokemons2:Pokemon[]) => {
 
-    let returnPokemons = [];
+    let returnPokemons:Pokemon[];
 
     for (let i = 0; i < pokemons.length; i++){
         const pokemon = pokemons[i];
