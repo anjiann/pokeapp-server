@@ -1,7 +1,7 @@
 import { pokeapiBaseClient } from "."
 import { Pokemon } from "./Pokemon";
 
-export const getOnePokemon = async (name:string):Promise<Pokemon> =>{
+export const getOnePokemon = async (name:string):Promise<Pokemon> => {
     try{
         let res = await pokeapiBaseClient.get(`/pokemon/${name}`);
 
@@ -90,4 +90,27 @@ export const getPokemonBySearch = async (input:string):Promise<Pokemon[]> => {
     } catch(e){
         throw new Error();
     }
+}
+
+export const getMatches = (pokemons:Pokemon[], pokemons2:Pokemon[]) => {
+
+    let returnPokemons = [];
+
+    for (let i = 0; i < pokemons.length; i++){
+        const pokemon = pokemons[i];
+    
+
+        const foundMatch = pokemons2.some(pokemon2 => {
+            if (pokemon2.name === pokemon.name){
+                return true
+            }
+        })
+
+        if (foundMatch){
+            returnPokemons.push(pokemons[i]);
+        }
+        
+    }
+
+    return returnPokemons;
 }
