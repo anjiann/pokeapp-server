@@ -10,18 +10,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.revature.models.Users;
 import com.revature.services.AuthenticateService;
-import com.revature.services.UserService;
+
 
 @RestController
 @RequestMapping("/auth")
 public class UserAuthenticatController {
 
 	private AuthenticateService authenticateService;
+	
 
 	@Autowired
-	public UserAuthenticatController(AuthenticateService authenticateService) {
+	public UserAuthenticatController(AuthenticateService authenticateService ) {
 		
 		this.authenticateService = authenticateService;
+		
 	}
 	
 	
@@ -31,9 +33,7 @@ public class UserAuthenticatController {
 	@PostMapping
 	public ResponseEntity<Users> saveUser(@RequestBody Users user){
 		
-	
-		
-		
+
 		
 		if(authenticateService.authUser(user)== null) {
 			

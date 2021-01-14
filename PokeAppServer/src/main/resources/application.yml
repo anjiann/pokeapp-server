@@ -32,6 +32,10 @@ spring:
         default_schema: ${DB_SCHEMA}
     show-sql: true
   
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  
   
 
 ---
