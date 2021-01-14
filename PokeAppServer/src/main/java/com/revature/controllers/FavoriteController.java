@@ -28,6 +28,8 @@ public class FavoriteController {
 	}
 	
 	
+	// to add teh favorite item take post request with favorite object must need user id and pokemon id 
+	
 	@PostMapping
 	public ResponseEntity<Favorite> addFavorite(@RequestBody Favorite favorite){
 		
@@ -42,6 +44,9 @@ public class FavoriteController {
 		
 		
 	}
+	
+	// this function delet the favorite from perticuler user must need is favorit id
+	
 	@GetMapping("/deletfav/{id}")
 	public ResponseEntity<Favorite> removeFavorite(@PathVariable int id){
 		

@@ -31,7 +31,7 @@ public class UserController {
 	
 	
 	
-	// Create New User if User with the same name already exixst it will send 403 Error cod 
+	// Create New User if User with the same name already exist it will send 403 Error cod 
 	
 	@PostMapping
 	public ResponseEntity<Users> saveUser(@RequestBody Users user){
@@ -48,6 +48,9 @@ public class UserController {
 		
 	}
 		
+	
+	// get perticuler user details by user id
+	
 		@GetMapping("/{id}")	
 		public ResponseEntity<Users> getUser(@PathVariable int id){
 			

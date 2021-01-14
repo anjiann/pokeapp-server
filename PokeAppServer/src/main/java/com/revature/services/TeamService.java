@@ -8,6 +8,6 @@ public interface TeamService {
 	
 	public Boolean deletTeam(int id);
 	
-	
+	public Teams getOneTeam(int id);
 	
 }
