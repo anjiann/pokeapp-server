@@ -102,7 +102,7 @@ export const getMatchingPokemons = (pokemons:Pokemon[], pokemons2:Pokemon[]) => 
 
         const foundMatch = pokemons2.some(pokemon2 => {
             if (pokemon2.name === pokemon.name){
-                return true
+                return true;
             }
         })
 
