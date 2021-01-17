@@ -64,7 +64,7 @@ public class TeamController {
 	// this will add the pokemon in the list must need pokemon id and list id in which pokemon need to be added 
 	
 	@PostMapping("/addpoke")
-	public ResponseEntity<TeamList> addPokeInList(TeamList teamList){
+	public ResponseEntity<TeamList> addPokeInList(@PathVariable TeamList teamList){
 		
 		try {
 		
