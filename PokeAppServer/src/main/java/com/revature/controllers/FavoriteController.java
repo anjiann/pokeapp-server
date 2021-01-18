@@ -47,10 +47,13 @@ public class FavoriteController {
 	
 	// this function delet the favorite from perticuler user must need is favorit id
 	
-	@GetMapping("/deletfav/{id}")
-	public ResponseEntity<Favorite> removeFavorite(@PathVariable int id){
+	@PostMapping("/deletfav")
+	public ResponseEntity<Favorite> removeFavorite(@RequestBody Favorite favorite){
 		
-		if(favService.removeFavorite(id)) {
+		int userid = favorite.getFavUserId();
+		int favid = favorite.getfavPokeId();
+		
+		if(favService.removeFavorite(userid, favid)) {
 			
 			return new ResponseEntity<Favorite>(HttpStatus.OK);
 		}

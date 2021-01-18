@@ -36,18 +36,24 @@ public class FavoriteServiceImple implements FavoriteService {
 
 
 	@Override
-	public Boolean removeFavorite(int favId) {
-		// TODO Auto-generated method stub
-		Boolean deletaed = true; 
-		try {
-		favDao.deleteById(favId);	
+	public Boolean removeFavorite(int userid, int pokeid) {
 		
+		Boolean isDeleted = false;
+		// TODO Auto-generated method stub
+		try {
+		 favDao.deletByUserIdnadPokeID(userid, pokeid);
 		}
 		catch (Exception e) {
 			// TODO: handle exception
-			deletaed = false;
+			isDeleted = true;
 		}
-		return deletaed;
+		
+		return isDeleted;
 	}
+
+
+
+
+
 
 }

@@ -6,6 +6,8 @@ public interface FavoriteService {
 	
 	public Favorite saveFavorite(Favorite favotrite);
 	
-	public Boolean removeFavorite(int favid);
+	public Boolean removeFavorite(int userid, int pokeid);
+
+	
 
 }
